@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delicious Bites – Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="logo">Delicious Bites</div>
+    <button class="menu-btn" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="menu-section reveal">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item card">
+        <img src="images/pizza.jpg" alt="Margherita Pizza" />
+        <div class="card-body">
+          <h3>Margherita Pizza</h3>
+          <p>Fresh mozzarella, basil, and tomato.</p>
+          <span class="price">₹299</span><br/>
+          <button class="btn" data-add data-id="pizza1" data-name="Margherita Pizza" data-price="299">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item card">
+        <img src="images/burger.jpg" alt="Veggie Burger" />
+        <div class="card-body">
+          <h3>Veggie Burger</h3>
+          <p>Grilled veggie patty with fresh lettuce and house sauce.</p>
+          <span class="price">₹199</span><br/>
+          <button class="btn" data-add data-id="burger1" data-name="Veggie Burger" data-price="199">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item card">
+        <img src="images/pasta.jpg" alt="Alfredo Pasta" />
+        <div class="card-body">
+          <h3>Alfredo Pasta</h3>
+          <p>Creamy garlic sauce with parmesan and herbs.</p>
+          <span class="price">₹249</span><br/>
+          <button class="btn" data-add data-id="pasta1" data-name="Alfredo Pasta" data-price="249">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button id="open-cart" class="cart-toggle" aria-label="Open cart">Cart</button>
+
+  <aside class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button id="close-cart" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total">
+        <span>Total</span>
+        <strong id="cart-total">₹0.00</strong>
+      </div>
+      <form id="checkout-form" autocomplete="on">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone" required />
+        <textarea name="address" rows="3" placeholder="Delivery Address" required></textarea>
+        <button type="submit">Place Order</button>
+      </form>
+      <small style="display:block; margin-top:8px; color:#666;">Cash on Delivery by default.</small>
+    </div>
+  </aside>
+
+  <footer>
+    <p>© 2025 Delicious Bites. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
